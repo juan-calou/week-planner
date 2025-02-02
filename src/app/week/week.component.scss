@@ -9,6 +9,14 @@
   mat-card {
     width: 100%;
     max-width: 350px;
+
+    &.today {
+      background: #7393f03b;
+    }
+
+    &.passed {
+      background: #8080803b;
+    }
   }
 }
 

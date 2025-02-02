@@ -1,5 +1,12 @@
 <div class="week">
-  <mat-card *ngFor="let day of days; let i = index">
+  <mat-card
+    *ngFor="let day of days; let i = index"
+    [ngClass]="{ 
+      today: i === dayOfWeek,
+      passed: i < dayOfWeek,
+    }"
+    class="day-{{ i }}"
+  >
     <mat-card-content>
       <app-day
         [day]="day"
