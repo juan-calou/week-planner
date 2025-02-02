@@ -10,13 +10,13 @@ import { LocalStorageService } from '../core/services/local-storage.service';
 export class WeekComponent implements OnInit {
   days: string[] = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
   events: Event[][] = [];
-  dayOfWeek: number = 0;
+  currentDayIndex: number = 0;
 
   constructor(private localStorageService: LocalStorageService) {}
 
   ngOnInit(): void {
     const currentDate = new Date();
-    this.dayOfWeek = currentDate.getDay();
+    this.currentDayIndex = currentDate.getDay() - 1;
     this.loadEvents();
   }
 

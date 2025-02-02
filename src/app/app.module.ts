@@ -15,6 +15,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { AddEventComponent } from './add-event/add-event.component';
+import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [];
 
@@ -25,6 +26,7 @@ const routes: Routes = [];
     DayComponent,
     EventComponent,
     AddEventComponent,
+    HeaderComponent,
   ],
   imports: [
     RouterModule.forRoot(routes, {

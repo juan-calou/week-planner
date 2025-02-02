@@ -2,8 +2,8 @@
   <mat-card
     *ngFor="let day of days; let i = index"
     [ngClass]="{ 
-      today: i === dayOfWeek,
-      passed: i < dayOfWeek,
+      today: i === currentDayIndex,
+      passed: i < currentDayIndex,
     }"
     class="day-{{ i }}"
   >
