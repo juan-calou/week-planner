@@ -1,0 +1,22 @@
+.week {
+  margin: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+  justify-content: center;
+
+  mat-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+.add-event {
+  margin: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+  justify-content: center;
+}

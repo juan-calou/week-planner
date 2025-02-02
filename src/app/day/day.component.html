@@ -1,0 +1,18 @@
+<div class="day">
+  <div class="day-header">
+    <h2>{{ day }}</h2>
+    <button mat-button color="warn" (click)="clearDay(dayIndex)">
+      Clear Day
+    </button>
+  </div>
+  <div cdkDropList (cdkDropListDropped)="drop($event)">
+    <div *ngFor="let event of events; let i = index" cdkDrag class="event">
+      <app-event
+        [event]="event"
+        [dayIndex]="dayIndex"
+        [eventIndex]="i"
+        [removeEvent]="handleremoveEvent.bind(this)"
+      ></app-event>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="day">
+  <mat-accordion class="headers-align">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Add New Event</mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <form class="form" [formGroup]="form">
+        <ng-container *ngIf="showDaySelector">
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Day</mat-label>
+            <mat-select formControlName="eventDay">
+              <mat-option value="0">Monday</mat-option>
+              <mat-option value="1">Tuesday</mat-option>
+              <mat-option value="2">Wednesday</mat-option>
+              <mat-option value="3">Thursday</mat-option>
+              <mat-option value="4">Friday</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </ng-container>
+        <mat-form-field class="full-width">
+          <mat-label>Event Name</mat-label>
+          <input
+            matInput
+            formControlName="eventName"
+            placeholder="Event Name"
+          />
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-label>Event Time</mat-label>
+          <input
+            matInput
+            formControlName="eventTime"
+            placeholder="Time (HH:mm)"
+          />
+        </mat-form-field>
+        <mat-form-field class="full-width" appearance="fill">
+          <mat-label>Type</mat-label>
+          <mat-select formControlName="eventCategory">
+            <mat-option value="personal">Personal</mat-option>
+            <mat-option value="work">Work</mat-option>
+            <mat-option value="other">Other</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <button
+          mat-flat-button
+          color="primary"
+          type="submit"
+          (click)="submit()"
+          class="full-width"
+        >
+          Add Event
+        </button>
+      </form>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

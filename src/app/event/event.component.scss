@@ -1,0 +1,89 @@
+@import "src/styles/variables";
+
+.event-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  position: relative;
+  margin-bottom: 8px;
+
+  &.event-card-type-personal {
+    background-color: $color-2;
+  }
+
+  &.event-card-type-work {
+    background-color: $color-1;
+  }
+
+  &.event-card-type-other {
+    background-color: $color-3;
+  }
+
+  .event-time {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+
+  .event-description {
+    margin-bottom: 4px;
+  }
+
+  .event-type {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: white;
+
+    &.event-type-personal {
+      color: $color-2;
+    }
+
+    &.event-type-work {
+      color: $color-1;
+    }
+
+    &.event-type-other {
+      color: $color-3;
+    }
+  }
+
+  .delete-button {
+    opacity: 0;
+    transition: all 0.2s ease;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: $color-4;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .delete-button:hover {
+    background-color: #d32f2f;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .delete-button {
+      opacity: 1;
+    }
+  }
+}

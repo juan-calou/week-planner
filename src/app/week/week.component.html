@@ -1,0 +1,26 @@
+<div class="week">
+  <mat-card *ngFor="let day of days; let i = index">
+    <mat-card-content>
+      <app-day
+        [day]="day"
+        [dayIndex]="i"
+        [events]="events[i] || []"
+        [addEvent]="addEvent.bind(this)"
+        [clearDay]="clearDay.bind(this)"
+        [changeEvent]="changeEvent.bind(this)"
+        [removeEvent]="removeEvent.bind(this)"
+      >
+      </app-day>
+    </mat-card-content>
+  </mat-card>
+</div>
+<div class="add-event">
+  <mat-card>
+    <mat-card-content>
+      <app-add-event
+        [showDaySelector]="true"
+        [addEvent]="addEvent.bind(this)"
+      ></app-add-event>
+    </mat-card-content>
+  </mat-card>
+</div>

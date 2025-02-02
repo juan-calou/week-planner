@@ -1,0 +1,14 @@
+<div class="event-card event-card-type-{{ event.category }}">
+  <div class="event-time">{{ event.time }}hs.</div>
+  <div class="event-description">{{ event.name }}</div>
+  <span class="event-type event-type-{{ event.category }}">{{
+    event.category
+  }}</span>
+  <button
+    class="delete-button"
+    aria-label="Delete event"
+    (click)="removeEvent(eventIndex)"
+  >
+    ×
+  </button>
+</div>
